@@ -21,5 +21,4 @@ class MySystem(RatingSystem):
         """
         Ta metoda zwraca numery indeksów wszystkich twórców rozwiązania. Poniżej przykład.
         """
-        return "System created by 155898 and 000000 and 000000"
-        # tutaj uzupełnić indeksy
+        return "System created by 155898 and 156021 and 155934"
