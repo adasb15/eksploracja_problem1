@@ -29,6 +29,8 @@ class MySystem(RatingSystem):
         adjusted_user_bias = raw_user_bias * confidence_multiplier
         
         prediction = movie_avg + adjusted_user_bias
+        prediction = round(prediction * 2) / 2
+        
         return max(0.5, min(5.0, float(prediction)))
 
     def __str__(self):
