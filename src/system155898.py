@@ -8,13 +8,15 @@ class MySystem(RatingSystem):
     def __init__(self):
         super().__init__()
         self.default_global = 2.5
-        self.movie_reg = 10.0
-        self.user_reg = 5.0
-        self.genre_reg = 5.0
-        self.user_bias_weight = 0.7
-        self.user_genre_weight = 0.5
+        self.movie_reg = 18.344
+        self.user_reg = 18.487
+        self.genre_reg = 14.390
+        
+        self.user_bias_weight = 1.251
+        self.user_genre_weight = 0.063
         self.global_genre_weight = 0.2
-        self.user_conf_reg = 10.0
+        
+        self.user_conf_reg = 39.990
         self.genre_conf_reg = 8.0
 
         all_ratings = [r for ratings in self.movie_ratings.values() for r in ratings]
