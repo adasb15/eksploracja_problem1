@@ -16,13 +16,13 @@ from system155898 import MySystem
 
 def main():
     # Read the movie indices
-    with open("../data/movie.csv", encoding="utf-8") as file:
+    with open("./data/movie.csv", encoding="utf-8") as file:
         csv_reader = csv.reader(file)
         csv_reader.__next__()
         for line in csv_reader:
             Movie(int(line[0]), line[1])
     # Read the user indices
-    with open("../data/rating.csv", encoding="utf-8") as file:
+    with open("./data/rating.csv", encoding="utf-8") as file:
         csv_reader = csv.reader(file)
         csv_reader.__next__()
         for line in tqdm(csv_reader, total=20000263):
