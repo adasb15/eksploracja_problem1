@@ -45,14 +45,6 @@ class MySystem(RatingSystem):
             for m_id, rat in ratings.items():
                 self.movie_to_user_ratings[m_id].append((u_id, rat))
 
-        leaks = 0
-        for user_id, movie_id in test_pairs:
-            uid = int(user_id)
-            mid = int(movie_id)
-            if any(n_uid == uid for n_uid, _ in self.movie_to_user_ratings.get(mid, [])):
-                leaks += 1
-        print("Liczba test_pairs obecnych w movie_to_user_ratings:", leaks)
-
         self.user_means = {}
         for u_id, ratings in self.user_clean_ratings.items():
             u_ratings = list(ratings.values())
